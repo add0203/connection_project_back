@@ -6,8 +6,23 @@ import connectDB from "./db.js";
 import userRoute from "./route/userRoute.js";
 const app = express();
 
+// const corsOptions = {
+//   origin: "http://127.0.0.1:5501",
+// };
+
+const whitelist = [
+  "https://connection-project-front-95tco86gd-add0203s-projects.vercel.app",
+  "",
+];
+
 const corsOptions = {
-  origin: "http://127.0.0.1:5501",
+  origin: function (origin, callback) {
+    if (whitelist.indexOf(origin) !== -1 || !origin) {
+      callback(null, true);
+    } else {
+      callback(new Error("Not allowed by CORS"));
+    }
+  },
 };
 
 app.use(cors(corsOptions));
