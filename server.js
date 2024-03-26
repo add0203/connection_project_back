@@ -23,6 +23,7 @@ const corsOptions = {
       callback(new Error("Not allowed by CORS"));
     }
   },
+  // origin: "https://connection-project-front-95tco86gd-add0203s-projects.vercel.app",
 };
 
 app.use(cors(corsOptions));
