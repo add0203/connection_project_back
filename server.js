@@ -1,9 +1,16 @@
 // require("dotenv").config();
 import "dotenv/config";
 import express from "express";
+import cors from "cors";
 import connectDB from "./db.js";
 import userRoute from "./route/userRoute.js";
 const app = express();
+
+const corsOptions = {
+  origin: "http://127.0.0.1:5501",
+};
+
+app.use(cors(corsOptions));
 
 app.get("/", (req, res) => {
   res.send("Server is Ready");
