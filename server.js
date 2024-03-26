@@ -7,7 +7,7 @@ import userRoute from "./route/userRoute.js";
 const app = express();
 
 const corsOptions = {
-  origin: "http://127.0.0.1:5501",
+  origin: "https://connection-project-front-95tco86gd-add0203s-projects.vercel.app",
 };
 
 app.use(cors(corsOptions));
