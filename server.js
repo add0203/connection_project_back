@@ -11,7 +11,7 @@ const app = express();
 // };
 
 const whitelist = [
-  // "https://connection-project-front-95tco86gd-add0203s-projects.vercel.app",
+  "https://connection-project-front-95tco86gd-add0203s-projects.vercel.app",
   "https://connection-project-back-e3mccquuu-add0203s-projects.vercel.app",
 ];
 
